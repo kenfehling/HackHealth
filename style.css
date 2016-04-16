@@ -24,7 +24,6 @@ body {
 }
 
 .food .name, .food .sugar {
-    font-weight: bold;
     margin-bottom: 1%;
 }
 
