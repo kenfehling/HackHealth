@@ -1,4 +1,13 @@
 [
-  { "img": "beer.png", "name": "Beer", "sugar": 4.2 },
-  { "img": "banana.png", "name": "Banana", "sugar": 3.2 }
+  { "img": "banana.png", "name": "Banana", "sugar": 12.23 },
+  { "img": "beer.png", "name": "Beer", "sugar": 0 },
+  { "img": "chobani.png", "name": "Plain Greek Yogurt", "sugar": 3.53 },
+  { "img": "donut.png", "name": "Frosted Donut", "sugar": 4.2 },
+  { "img": "fried tofu.png", "name": "Fried tofu", "sugar": 3.2 },
+  { "img": "granolabar.png", "name": "Granola bar", "sugar": 4.2 },
+  { "img": "meat.png", "name": "Steak", "sugar": 0 },
+  { "img": "pepsi.png", "name": "Pepsi", "sugar": 4.2 },
+  { "img": "pringles.png", "name": "Pringles", "sugar": 3.2 },
+  { "img": "raisins.jpg", "name": "Raisins", "sugar": 59.19 },
+  { "img": "strawberries.png", "name": "Strawberries", "sugar": 3.2 }
 ]

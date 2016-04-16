@@ -19,8 +19,9 @@ $(function() {
             $answer.text('Wrong');
         }
         $answer.css('display', 'block');
+        $choices.find('.sugar').css('display', 'block');
         _.each(choices, function(food, i) {
-            $($choices.get(i)).find('.sugar').text(food.sugar);
+            $($choices.get(i)).find('.sugar').text(food.sugar + 'g / 100g');
         });
         $nextBtn.css('display', 'block');
     }
@@ -29,6 +30,7 @@ $(function() {
         $answer.removeClass();
         $answer.css('display', 'none');
         $nextBtn.css('display', 'none');
+        $choices.find('.sugar').css('display', 'none');
         choices = _.sampleSize(allFoods, 2);
         _.each(choices, function(food, i) {
             var $el = $($choices.get(i));
