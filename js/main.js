@@ -1,13 +1,17 @@
 $(function() {
+    var allFoods;
+    var choices;
+    var answered;
     var clickSelector = '.food img.image';
     var $choices = $('.food');
     var $answer = $('#answer');
     var $nextBtn = $('#next-btn');
 
-    var allFoods;
-    var choices;
-
     function onFoodSelect(e) {
+        if (answered) {
+            return;
+        }
+        answered = true;
         var lowest = _.min(_.map(choices, function(f) { return f.sugar; }));
         var index = $(e.target).index(clickSelector);
         if (choices[index].sugar === lowest) {
@@ -27,6 +31,7 @@ $(function() {
     }
 
     function showQuestion() {
+        answered = false;
         $answer.removeClass();
         $answer.css('display', 'none');
         $nextBtn.css('display', 'none');

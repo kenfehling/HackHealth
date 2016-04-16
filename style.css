@@ -46,3 +46,9 @@ body {
     width:33%;
     cursor: pointer;
 }
+
+#footer {
+    margin-top: 3.5%;
+    text-align: center;
+    font-size: small;
+}
