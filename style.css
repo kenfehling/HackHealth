@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     width: 100%;
     font-family: Arial, sans-serif;
@@ -55,7 +60,23 @@ body {
     cursor: pointer;
 }
 
-#footer {
+header, footer {
+    padding: 10px;
+}
+
+header #title {
+    height: 1em;
+}
+
+header #left {
+    float: left;
+}
+
+header #right {
+    float: right;
+}
+
+footer {
     margin-top: 3.5%;
     text-align: center;
     font-size: small;
