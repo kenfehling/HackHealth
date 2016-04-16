@@ -1,0 +1,18 @@
+body {
+    width: 100%;
+}
+
+#game, #foods {
+    text-align: center;
+}
+
+#foods {
+    display: flex;
+    padding: 0 10%;
+}
+
+.food {
+    width: 50%;
+
+    cursor: pointer;
+}
