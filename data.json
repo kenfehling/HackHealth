@@ -14,5 +14,9 @@
   { "img": "gatorade.png", "name": "Gatorade", "sugar": 5.24 },
   { "img": "lays.png", "name": "Potato chips", "sugar": 0.76 },
   { "img": "sprite.png", "name": "Sprite", "sugar": 8.98 },
-  { "img": "tomato.png", "name": "Tomato", "sugar": 2.63 }
+  { "img": "tomato.png", "name": "Tomato", "sugar": 2.63 },
+  { "img": "pizza.png", "name": "Domino's plain pizza", "sugar": 4.02 },
+  { "img": "orange.png", "name": "Orange", "sugar": 9.14 },
+  { "img": "rice-krispies.png", "name": "Rice Krispies", "sugar": 9.87 },
+  { "img": "frosted-flakes.png", "name": "Frosted Flakes", "sugar": 38.1 }
 ]
