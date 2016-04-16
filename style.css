@@ -1,12 +1,13 @@
 body {
     width: 100%;
+    font-family: Arial, sans-serif;
 }
 
-#game, #foods {
+#game {
     text-align: center;
 }
 
-#foods {
+#choices {
     display: flex;
     padding: 0 10%;
 }
@@ -19,13 +20,17 @@ body {
     height: 50%;
     width: 50%;
     cursor: pointer;
+    margin-bottom: 2%;
+}
+
+#answer, #next-btn {
+    border-radius: 5px;
+    margin: 2% auto;
+    padding: 2%;
 }
 
 #answer {
-    border-radius: 5px;
     width: 50%;
-    margin: auto;
-    padding: 2%;
 }
 
 #answer.correct {
@@ -34,4 +39,10 @@ body {
 
 #answer.wrong {
     background-color: #F99;
+}
+
+#next-btn {
+    background-color: #999;
+    width:33%;
+    cursor: pointer;
 }

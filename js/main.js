@@ -1,39 +1,54 @@
 $(function() {
     var clickSelector = '.food img.image';
+    var $choices = $('.food');
     var $answer = $('#answer');
-    var $foods = $('.food');
+    var $nextBtn = $('#next-btn');
+
+    var allFoods;
+    var choices;
+
+    function onFoodSelect(e) {
+        var lowest = _.min(_.map(choices, function(f) { return f.sugar; }));
+        var index = $(e.target).index(clickSelector);
+        if (choices[index].sugar === lowest) {
+            $answer.addClass('correct');
+            $answer.text('Correct!');
+        }
+        else {
+            $answer.addClass('wrong');
+            $answer.text('Wrong');
+        }
+        $answer.css('display', 'block');
+        _.each(choices, function(food, i) {
+            $($choices.get(i)).find('.sugar').text(food.sugar);
+        });
+        $nextBtn.css('display', 'block');
+    }
+
+    function showQuestion() {
+        $answer.removeClass();
+        $answer.css('display', 'none');
+        $nextBtn.css('display', 'none');
+        choices = _.sampleSize(allFoods, 2);
+        _.each(choices, function(food, i) {
+            var $el = $($choices.get(i));
+            $el.find('img.image').attr('src', 'img/' + food.img);
+            $el.find('img.image').attr('alt', 'img/' + food.name);
+            $el.find('.name').text(food.name);
+        });
+    }
+
+    function main() {
+        showQuestion();
+        $nextBtn.click(showQuestion);
+        $(clickSelector).click(onFoodSelect);
+    }
 
     fetch('data.json')
     .then(function(response) {
         return response.json()
     }).then(function(data) {
-        startGame(data);
+        allFoods = data;
+        main();
     });
-
-    function startGame(data) {
-        var foods = _.sampleSize(data, 2);
-
-        _.each(foods, function(food, i) {
-            var $el = $($foods.get(i));
-            $el.find('img.image').attr('src', 'img/' + food.img);
-            $el.find('img.image').attr('alt', 'img/' + food.name);
-            $el.find('.name').text(food.name);
-        });
-
-        $(clickSelector).click(function(e) {
-            var lowest = _.min(_.map(foods, function(f) { return f.sugar; }));
-            var index = $(e.target).index(clickSelector);
-            if (foods[index].sugar === lowest) {
-                $answer.addClass('correct');
-                $answer.text('Correct!');
-            }
-            else {
-                $answer.addClass('wrong');
-                $answer.text('Wrong');
-            }
-            _.each(foods, function(food, i) {
-                $($foods.get(i)).find('.sugar').text(food.sugar);
-            });
-        });
-    }
 });
