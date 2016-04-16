@@ -13,6 +13,25 @@ body {
 
 .food {
     width: 50%;
+}
 
+.food img.image {
+    height: 50%;
+    width: 50%;
     cursor: pointer;
+}
+
+#answer {
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+}
+
+#answer.correct {
+    background-color: #9F9;
+}
+
+#answer.wrong {
+    background-color: #F99;
 }

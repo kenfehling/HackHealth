@@ -1,0 +1,4 @@
+[
+  { "img": "apple.png", "name": "Apple", "sugar": 4.2 },
+  { "img": "banana.svg", "name": "Banana", "sugar": 3.2 }
+]
